@@ -5,7 +5,7 @@
     "url": "http://www.ti.com/lsds/ti/microcontrollers_16-bit_32-bit/msp/overview.page",
     "homepage": "http://platformio.org/platforms/timsp430",
     "engines": {
-      "platformio": ">4.3"
+      "platformio": "<5"
 },
     "repository": {
       "type": "git",
@@ -16,6 +16,7 @@
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
       "http://dl.platformio.org/packages/manifest.json"
+      "https://github.com/troytjh/platform-msp432/make/platformio/manifest.json"
     ],
     "frameworks": {
       "arduino": {
@@ -35,7 +36,7 @@
       "framework-energiamsp432": {
         "type": "framework",
         "optional": true,
-        "version": "~1.10807.0"
+        "version": "~5.6.2"
       },
       "tool-mspdebug": {
         "type": "uploader",
