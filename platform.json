@@ -1,0 +1,51 @@
+{
+    "name": "timsp432",
+    "title": "TI MSP432",
+    "description": "https://training.ti.com/msp432-mcus-overview",
+    "url": "http://www.ti.com/lsds/ti/microcontrollers_16-bit_32-bit/msp/overview.page",
+    "homepage": "http://platformio.org/platforms/timsp430",
+    "engines": {
+      "platformio": ">4.3"
+},
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/troytjh/platform-msp432.git"
+    },
+    
+    "version": "2.2.0",
+    "packageRepositories": [
+      "https://dl.bintray.com/platformio/dl-packages/manifest.json",
+      "http://dl.platformio.org/packages/manifest.json"
+    ],
+    "frameworks": {
+      "arduino": {
+        "package": "framework-energiamsp432",
+        "script": "builder/frameworks/energia.py"
+      },
+      "energia": {
+        "package": "framework-energiamsp432",
+        "script": "builder/frameworks/energia.py"
+      }
+    },
+    "packages": {
+      "toolchain-timsp432": {
+        "type": "toolchain",
+        "version": "~1.40603.190926"
+      },
+      "framework-energiamsp432": {
+        "type": "framework",
+        "optional": true,
+        "version": "~1.10807.0"
+      },
+      "tool-mspdebug": {
+        "type": "uploader",
+        "optional": true,
+        "version": "~1.2400.0"
+      },
+      "tool-dslite": {
+        "type": "uploader",
+        "optional": true,
+        "version": "~1.80200.1400"
+      }
+    }
+  }
