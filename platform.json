@@ -28,10 +28,11 @@
         "script": "builder/frameworks/energia.py"
       }
     },
-    "toolchain-timsp432": {
-      "type": "toolchain",
-      "version": "~1.0.0"
-    },
+    "packages": {
+      "toolchain-timsp432": {
+        "type": "toolchain",
+        "version": "~1.0.0"
+      },
       "framework-energiamsp432r": {
         "type": "framework",
         "optional": true,
@@ -47,4 +48,5 @@
         "optional": true,
         "version": "~1.80200.1400"
       }
+    }
 }
