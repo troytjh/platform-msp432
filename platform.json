@@ -6,7 +6,7 @@
     "homepage": "http://platformio.org/platforms/timsp430",
     "engines": {
       "platformio": "<5"
-},
+    },
     "repository": {
       "type": "git",
       "url": "https://github.com/troytjh/platform-msp432.git"
@@ -20,11 +20,11 @@
     ],
     "frameworks": {
       "arduino": {
-        "package": "framework-energiamsp432",
+        "package": "framework-energiamsp432r",
         "script": "builder/frameworks/energia.py"
       },
       "energia": {
-        "package": "framework-energiamsp432",
+        "package": "framework-energiamsp432r",
         "script": "builder/frameworks/energia.py"
       }
     },
@@ -32,7 +32,7 @@
       "type": "toolchain",
       "version": "~1.0.0"
     },
-      "framework-energiamsp432": {
+      "framework-energiamsp432r": {
         "type": "framework",
         "optional": true,
         "version": "~5.6.2"
@@ -47,5 +47,4 @@
         "optional": true,
         "version": "~1.80200.1400"
       }
-    }
-  }
+}

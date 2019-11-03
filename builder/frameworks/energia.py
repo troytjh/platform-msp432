@@ -15,8 +15,8 @@ from SCons.Script import DefaultEnvironment
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 
-FRAMEWORK_DIR = platform.get_package_dir("framework-energiamsp432")
-FRAMEWORK_VERSION = platform.get_package_version("framework-energiamsp432")
+FRAMEWORK_DIR = platform.get_package_dir("framework-energiamsp432r")
+FRAMEWORK_VERSION = platform.get_package_version("framework-energiamsp432r")
 assert isdir(FRAMEWORK_DIR)
 
 board = env.BoardConfig()
@@ -35,7 +35,7 @@ env.Append(
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
         join(platform.get_package_dir(
-            "toolchain-timsp430"), "msp432", "include")
+            "toolchain-timsp432"), "msp432", "include")
     ],
 
     LIBSOURCE_DIRS=[
