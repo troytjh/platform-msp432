@@ -16,10 +16,7 @@
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
       "http://dl.platformio.org/packages/manifest.json",
-      "https://gitcdn.link/repo/troytjh/platform-msp432/master/make/platformio/manifest.json?token=ALR7DLGBMORLMZRWPHPYMWS5X4ZYY",
-      "https://raw.githubusercontent.com/troytjh/platform-msp432/master/make/platformio/manifest.json?token=ALR7DLHIEKUFUGSRYYEJFKK5X4YIG",
-      "https://github.com/troytjh/platform-msp432/blob/master/make/platformio/manifest.json",
-      "https://gist.githubusercontent.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/d8ee1bb1382a1ea81dbe8e7a000700bd1047ef6a/manifest.json"
+      "https://gist.github.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/ac82bb33bb32f2ef7f0039406384ac3335c40af8/manifest.json"
     ],
     "frameworks": {
       "arduino": {
