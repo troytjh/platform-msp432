@@ -1,5 +1,5 @@
 {
-    "name": "timsp432",
+    "name": "timsp432r",
     "title": "TI MSP432",
     "description": "https://training.ti.com/msp432-mcus-overview",
     "url": "http://www.ti.com/lsds/ti/microcontrollers_16-bit_32-bit/msp/overview.page",
@@ -15,8 +15,8 @@
     "version": "2.2.0",
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
-      "http://dl.platformio.org/packages/manifest.json"
-      "https://github.com/troytjh/platform-msp432/make/platformio/manifest.json"
+      "http://dl.platformio.org/packages/manifest.json",
+      "https://github.com/troytjh/platform-msp432/blob/master/make/platformio/manifest.json"
     ],
     "frameworks": {
       "arduino": {

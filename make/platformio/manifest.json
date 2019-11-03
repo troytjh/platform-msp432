@@ -9,37 +9,12 @@
     ],
     "toolchain-timsp432": [
         {
-          "sha1": "04cd3e095b4a7e7ff1c3c562a6e5c81565b20cc6", 
-          "system": [
-            "darwin_x86_64"
-          ], 
-          "url": "https://dl.bintray.com/platformio/dl-packages/toolchain-timsp430-darwin_x86_64-1.40603.190926.tar.gz", 
-          "version": "1.2.0.1"
-        },
-        {
-            "sha1": "4eeb8077496bb188f0ebdb86764f2ae140b3b48e", 
+            "sha1": "2439a0eb3dbf94ff69fdf5184e8bdeffaf687cd4",
             "system": [
-              "linux_i686"
-            ], 
-            "url": "https://dl.bintray.com/platformio/dl-packages/toolchain-timsp430-linux_i686-1.40603.0.tar.gz", 
-            "version": "1.2.0.1"
-          }, 
-          {
-            "sha1": "2439a0eb3dbf94ff69fdf5184e8bdeffaf687cd4", 
-            "system": [
-              "linux_x86_64"
-            ], 
-            "url": "https://dl.bintray.com/platformio/dl-packages/toolchain-timsp430-linux_x86_64-1.40603.190926.tar.gz", 
-            "version": "1.2.0.1"
-          }, 
-          {
-            "sha1": "47cf957692a13e6311a12cfb04b323e43d4b68dc", 
-            "system": [
-              "windows", 
-              "windows_amd64", 
-              "windows_x86"
-            ], 
-            "url": "https://dl.bintray.com/platformio/dl-packages/toolchain-timsp430-windows-1.40603.190926.tar.gz", 
-            "version": "1.2.0.1"
-          }
+                "linux_x86_64"
+            ],
+            "url": "https://github.com/troytjh/toolchain-timps432/archive/1.0.0.tar.gz",
+            "version": "1.0.0"
+        }
+    ]
 }
