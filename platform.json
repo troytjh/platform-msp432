@@ -16,6 +16,7 @@
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
       "http://dl.platformio.org/packages/manifest.json",
+      "https://raw.githubusercontent.com/troytjh/platform-msp432/master/make/platformio/manifest.json?token=ALR7DLHIEKUFUGSRYYEJFKK5X4YIG",
       "https://github.com/troytjh/platform-msp432/blob/master/make/platformio/manifest.json"
     ],
     "frameworks": {
@@ -29,17 +30,10 @@
       }
     },
     "packages": {
-      "toolchain-timsp432": [
-        {
-            "type": "toolchain",
-            "sha1": "d5b625e26a45fc2b87466cd0f54e3e4fe20df692",
-            "system": [
-                "linux_x86_64"
-            ],
-            "url": "https://github.com/troytjh/toolchain-timps432/archive/1.0.0.tar.gz",
-            "version": "1.0.0"
-        }
-      ],
+      "toolchain-timsp432": {
+        "type": "toolchain",
+        "version": "~1.0.0"
+      },
       "framework-energiamsp432r": {
         "type": "framework",
         "optional": true,
