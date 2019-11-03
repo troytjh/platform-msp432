@@ -31,7 +31,7 @@
     "packages": {
       "toolchain-timsp432": {
         "type": "toolchain",
-        "version": "~1.40603.190926"
+        "version": "~1.0.0"
       },
       "framework-energiamsp432": {
         "type": "framework",
