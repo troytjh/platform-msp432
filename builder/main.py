@@ -53,7 +53,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-include" join(platform.get_package_dir("toolchain-timsp432"),"arm","src","startup_msp432p401r_gcc.c")
+        "-include" join(platform.get_package_dir("toolchain-timsp432"),"arm","include","msp432p401r.h")
         #"-mmcu=$BOARD_MCU"
     ],
 
