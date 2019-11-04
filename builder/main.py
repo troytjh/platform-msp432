@@ -56,6 +56,16 @@ env.Append(
         ("F_CPU", "$BOARD_F_CPU")
     ],
 
+    CPPPATH=[
+        join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
+        join(variants_dir, board.get("build.variant")),
+        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
+        print(join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","src"))
+    ],
+
     LINKFLAGS=[
         "-Os",
         "-mmcu=$BOARD_MCU",
