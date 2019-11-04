@@ -44,7 +44,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mmcu=$BOARD_MCU"
+        #"-mmcu=$BOARD_MCU"
     ],
 
     CXXFLAGS=[
@@ -58,7 +58,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        #"-mmcu=$BOARD_MCU",
+        "-mmcu=$BOARD_MCU",
         "-Wl,-gc-sections,-u,main"
     ],
 
