@@ -6,6 +6,15 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
                           DefaultEnvironment)
 
 env = DefaultEnvironment()
+platform = env.PioPlatform()
+
+FRAMEWORK_DIR = platform.get_package_dir("framework-energiamsp432r")
+
+board = env.BoardConfig()
+
+variants_dir = join(
+    "$PROJECT_DIR", board.get("build.variants_dir")) if board.get(
+        "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
 
 env.Replace(
     AR="msp432-ar",
@@ -44,7 +53,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mmcu=$BOARD_MCU"
+        #"-mmcu=$BOARD_MCU"
     ],
 
     CXXFLAGS=[
@@ -54,6 +63,16 @@ env.Append(
 
     CPPDEFINES=[
         ("F_CPU", "$BOARD_F_CPU")
+    ],
+
+    CPPPATH=[
+        join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
+        join(variants_dir, board.get("build.variant")),
+        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
+        print(join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","src"))
     ],
 
     LINKFLAGS=[

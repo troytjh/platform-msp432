@@ -33,8 +33,11 @@ env.Append(
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
-        print(env),
-        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include")
+        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
+        join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
+        join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
+        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        join(platform.get_package_dir("toolchain-timsp432"),"arm","src")
     ],
 
     LIBSOURCE_DIRS=[
@@ -50,7 +53,7 @@ libs = []
 
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
-    join(FRAMEWORK_DIR, "cores", board.get("build.core"))
+    join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring")
 ))
 
 env.Append(LIBS=libs)
