@@ -47,10 +47,6 @@ env.Replace(
 )
 
 env.Append(
-    build_flags=[
-    -Ijoin(platform.get_package_dir("toolchain-timsp432"),"arm","include")
-    ],
-
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
