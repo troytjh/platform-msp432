@@ -58,7 +58,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-mmcu=$BOARD_MCU",
+        #"-mmcu=$BOARD_MCU",
         "-Wl,-gc-sections,-u,main"
     ],
 
