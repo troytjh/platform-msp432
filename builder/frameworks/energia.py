@@ -37,7 +37,8 @@ env.Append(
     ],
 
     LIBSOURCE_DIRS=[
-        join(FRAMEWORK_DIR, "libraries")
+        join(FRAMEWORK_DIR, "libraries"),
+        join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1","include")
     ]
 )
 
