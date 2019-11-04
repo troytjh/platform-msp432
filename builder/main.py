@@ -6,7 +6,7 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
                           DefaultEnvironment)
 
 env = DefaultEnvironment()
-platform = env.PioPlatform()print(
+platform = env.PioPlatform()
 
 FRAMEWORK_DIR = platform.get_package_dir("framework-energiamsp432r")
 
