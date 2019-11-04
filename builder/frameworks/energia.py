@@ -34,10 +34,10 @@ env.Append(
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
         join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
-        join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
-        join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","src")
+        print(join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","include")),
+        print(join(platform.get_package_dir("toolchain-timsp432"),"arm","src"))
     ],
 
     LIBSOURCE_DIRS=[
