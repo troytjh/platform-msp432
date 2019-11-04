@@ -10,6 +10,8 @@ platform = env.PioPlatform()
 
 FRAMEWORK_DIR = platform.get_package_dir("framework-energiamsp432r")
 
+board = env.BoardConfig()
+
 variants_dir = join(
     "$PROJECT_DIR", board.get("build.variants_dir")) if board.get(
         "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
