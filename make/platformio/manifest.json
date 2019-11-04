@@ -3,7 +3,7 @@
         {
         "sha1": "0faf18b698c69007ca1a132bd61c54a502158f3b", 
         "system": "*", 
-        "url": "https://github.com/energia/msp432r-core/archive/5.6.2.tar.gz", 
+        "url": "https://github.com/energia/msp432r-core.git", 
         "version": "5.6.2"
         }
     ],
@@ -13,7 +13,7 @@
             "system": [
                 "linux_x86_64"
             ],
-            "url": "https://github.com/troytjh/toolchain-timps432/archive/1.0.0.tar.gz",
+            "url": "https://github.com/troytjh/toolchain-timsp432.git",
             "version": "1.0.0"
         }
     ]
