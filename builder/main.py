@@ -62,7 +62,7 @@ env.Append(
         "-Wl,-gc-sections,-u,main"
     ],
 
-    LIBS=["lib","gcc","msp432","8.2.1"],
+    LIBS=["m"],
 
     BUILDERS=dict(
         ElfToHex=Builder(
