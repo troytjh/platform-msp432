@@ -33,8 +33,7 @@ env.Append(
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
-        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
-        join(platform.get_package_dir("toolchain-timsp432"), "lib", "msp432","8.2.1","include")
+        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include")
     ],
 
     LIBSOURCE_DIRS=[
