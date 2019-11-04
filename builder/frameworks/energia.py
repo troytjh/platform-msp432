@@ -31,6 +31,8 @@ env.Append(
         ("ENERGIA", int(FRAMEWORK_VERSION.split(".")[1]))
     ],
 
+    print(platform.get_package_dir("toolchain-timsp432"))
+    
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
