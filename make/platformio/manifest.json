@@ -1,7 +1,7 @@
 {
     "framework-energiamsp432r": [
         {
-        "sha1": "0faf18b698c69007ca1a132bd61c54a502158f3b", 
+        "sha1": "8473d0ce996ca7cc3ef6e4d594e680db85c56b28", 
         "system": "*", 
         "url": "https://github.com/energia/msp432r-core/archive/5.6.2.tar.gz", 
         "version": "5.6.2"
