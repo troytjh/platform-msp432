@@ -53,7 +53,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        #"-mmcu=$BOARD_MCU"
+        "-mmcu=$BOARD_MCU"
     ],
 
     CXXFLAGS=[
