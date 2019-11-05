@@ -42,7 +42,9 @@ env.Append(
     ],
 
     LIBSOURCE_DIRS=[
-        join(FRAMEWORK_DIR, "libraries")
+        join(FRAMEWORK_DIR, "libraries"),
+        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages")
+
     ]
 )
 
