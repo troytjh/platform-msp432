@@ -9,7 +9,7 @@
         "0x0c9f"
       ]
     ],
-    "mcu": "msp432p401r",
+    "mcu": "cortex-m4",
     "variant": "MSP-EXP432P401R"
   },
   "debug": {
