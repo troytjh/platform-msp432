@@ -46,7 +46,7 @@ env.Append(
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
         #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core")),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core")),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
         #join(FRAMEWORK_DIR,"system","source")
     ],
