@@ -35,7 +35,7 @@ env.Append(
         join(variants_dir, board.get("build.variant")),
         join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
         join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include-fixed"),
+        join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include-fixed"),
         #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
         #join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
@@ -51,7 +51,6 @@ env.Append(
         join(FRAMEWORK_DIR,"system","energia"),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
-        #join(FRAMEWORK_DIR,"system","source")
     ],
 
     LIBSOURCE_DIRS=[
