@@ -1,4 +1,6 @@
 {
+  "name": "TI LaunchPad MSP-EXP432P401R",
+  "device_id": "MSP432P401R",
   "build": {
     "core": "msp432r",
     "extra_flags": "-DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R",
@@ -9,7 +11,7 @@
         "0x0c9f"
       ]
     ],
-    "mcu": "cortex-m4",
+    "mcu": "msp432p401r",
     "variant": "MSP-EXP432P401R"
   },
   "debug": {
@@ -50,7 +52,6 @@
   "frameworks": [
     "arduino"
   ],
-  "name": "TI LaunchPad MSP-EXP432P401R",
   "upload": {
     "maximum_ram_size": 65536,
     "maximum_size": 262144,

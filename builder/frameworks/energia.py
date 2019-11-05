@@ -37,16 +37,16 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
         join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
-        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
-        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
-        join(FRAMEWORK_DIR,"system","source")
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
+        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
+        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
+        #join(FRAMEWORK_DIR,"system","source")
     ],
 
     LIBSOURCE_DIRS=[
@@ -58,7 +58,9 @@ env.Append(
 # Target: Build Core Library
 #
 
-libs = []
+libs = [
+    #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring","msp432","variants","MSP_EXP432P401R","lib","board.m4fg.lib")
+]
 
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),

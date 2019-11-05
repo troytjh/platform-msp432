@@ -16,6 +16,9 @@ variants_dir = join(
     "$PROJECT_DIR", board.get("build.variants_dir")) if board.get(
         "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
 
+CC=join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
+print("$CC")
+
 env.Replace(
     AR="msp432-ar",
     AS="msp432-as",
@@ -73,15 +76,15 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
         join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
-        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
-        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
-        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti"),
-        join(FRAMEWORK_DIR,"system","source")
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
+        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
+        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
+        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti"),
+        #join(FRAMEWORK_DIR,"system","source")
     ],
 
     LINKFLAGS=[
