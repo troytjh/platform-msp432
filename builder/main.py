@@ -28,7 +28,7 @@ env.Replace(
     OBJCOPY="msp432-objcopy",
     RANLIB="msp432-ranlib",
     SIZETOOL="msp432-size",
-    LINK="$CC",
+    LINK=joind(CC,"CC"),
 
     ARFLAGS=["rc"],
 
@@ -49,7 +49,6 @@ env.Replace(
     PROGSUFFIX=".elf"
 )
 
-print("$CC"),
 env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
