@@ -53,7 +53,6 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-include msp432p401r.h"
         #"-mmcu=$BOARD_MCU"
     ],
 
