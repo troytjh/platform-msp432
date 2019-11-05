@@ -34,9 +34,9 @@ env.Append(
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
         join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
-        join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
-        join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
@@ -50,7 +50,7 @@ env.Append(
     ],
 
     LIBSOURCE_DIRS=[
-        join(FRAMEWORK_DIR, "libraries")
+        join(FRAMEWORK_DIR, "libraries"),
     ]
 )
 
@@ -58,9 +58,7 @@ env.Append(
 # Target: Build Core Library
 #
 
-libs = [
-    #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring","msp432","variants","MSP_EXP432P401R","lib","board.m4fg.lib")
-]
+libs = []
 
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),

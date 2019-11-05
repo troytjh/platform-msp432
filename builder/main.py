@@ -16,9 +16,6 @@ variants_dir = join(
     "$PROJECT_DIR", board.get("build.variants_dir")) if board.get(
         "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
 
-CC=join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")
-print(CC)
-
 env.Replace(
     AR="msp432-ar",
     AS="msp432-as",
@@ -28,7 +25,7 @@ env.Replace(
     OBJCOPY="msp432-objcopy",
     RANLIB="msp432-ranlib",
     SIZETOOL="msp432-size",
-    LINK=join(CC,"CC"),
+    LINK="$CC",
 
     ARFLAGS=["rc"],
 
@@ -68,14 +65,14 @@ env.Append(
         ("F_CPU", "$BOARD_F_CPU")
     ],
 
-    CPPPATH=[
-        join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
-        join(variants_dir, board.get("build.variant")),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
-        join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
-        join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+    #CPPPATH=[
+        #join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
+        #join(variants_dir, board.get("build.variant")),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
+        #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
+        #join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
         #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
@@ -85,7 +82,7 @@ env.Append(
         #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
         #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti"),
         #join(FRAMEWORK_DIR,"system","source")
-    ],
+    #],
 
     LINKFLAGS=[
         "-Os",
