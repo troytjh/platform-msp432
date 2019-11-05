@@ -73,7 +73,8 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
         join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti")
+        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti"),
+        join(FRAMEWORK_DIR,"system","source")
     ],
 
     LINKFLAGS=[
