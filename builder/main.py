@@ -28,7 +28,7 @@ env.Replace(
     OBJCOPY="msp432-objcopy",
     RANLIB="msp432-ranlib",
     SIZETOOL="msp432-size",
-    LINK=joind(CC,"CC"),
+    LINK=join(CC,"CC"),
 
     ARFLAGS=["rc"],
 
