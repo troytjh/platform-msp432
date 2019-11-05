@@ -51,9 +51,7 @@ env.Append(
 # Target: Build Core Library
 #
 
-libs = [
-    join(FRAMEWORK_DIR,"system","kernel","tirtos","packages")
-]
+libs = []
 
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
