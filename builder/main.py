@@ -29,7 +29,6 @@ env.Replace(
     RANLIB="msp432-ranlib",
     SIZETOOL="msp432-size",
     LINK="$CC",
-    print("$CC"),
 
     ARFLAGS=["rc"],
 
@@ -51,6 +50,7 @@ env.Replace(
 )
 
 env.Append(
+    print("$CC"),
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
