@@ -57,7 +57,6 @@ libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
     join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring"),
     join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
-    join(FRAMEWORK_DIR,"system","source")
 ))
 
 env.Append(LIBS=libs)
