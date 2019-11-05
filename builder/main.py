@@ -49,8 +49,8 @@ env.Replace(
     PROGSUFFIX=".elf"
 )
 
+print("$CC"),
 env.Append(
-    print("$CC"),
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
