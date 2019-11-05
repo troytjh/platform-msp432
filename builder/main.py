@@ -16,7 +16,7 @@ variants_dir = join(
     "$PROJECT_DIR", board.get("build.variants_dir")) if board.get(
         "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
 
-CC=join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")
+CC="${join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1")}"
 print("$CC")
 
 env.Replace(
