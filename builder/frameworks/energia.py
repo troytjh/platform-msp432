@@ -41,6 +41,7 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","lib","gcc","arm-none-eabi","6.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
         #join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include"),
         #join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include-fixed"),
         #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
