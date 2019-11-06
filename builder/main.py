@@ -17,14 +17,14 @@ variants_dir = join(
         "build.variants_dir", "") else join(FRAMEWORK_DIR, "variants")
 
 env.Replace(
-    AR="msp432-ar",
-    AS="msp432-as",
-    CC="msp432-gcc",
-    CXX="msp432-g++",
-    GDB="msp432-gdb",
-    OBJCOPY="msp432-objcopy",
-    RANLIB="msp432-ranlib",
-    SIZETOOL="msp432-size",
+    AR="arm-none-eabi-ar",
+    AS="arm-none-eabi-as",
+    CC="arm-none-eabi-gcc",
+    CXX="arm-none-eabi-g++",
+    GDB="arm-none-eabi-gdb",
+    OBJCOPY="arm-none-eabi-objcopy",
+    RANLIB="arm-none-eabi-ranlib",
+    SIZETOOL="arm-none-eabi-size",
     LINK="$CC",
 
     ARFLAGS=["rc"],
@@ -53,7 +53,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        #"-mmcu=$BOARD_MCU"
+        "-mcpu={build.mcu}"",
     ],
 
     CXXFLAGS=[
@@ -65,28 +65,9 @@ env.Append(
         ("F_CPU", "$BOARD_F_CPU")
     ],
 
-    #CPPPATH=[
-        #join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
-        #join(variants_dir, board.get("build.variant")),
-        #join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "msp432", "include"),
-        #join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
-        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
-        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti"),
-        #join(FRAMEWORK_DIR,"system","source")
-    #],
-
     LINKFLAGS=[
         "-Os",
-        #"-mmcu=$BOARD_MCU",
+        "-mcpu={build.mcu}"",
         "-Wl,-gc-sections,-u,main"
     ],
 
