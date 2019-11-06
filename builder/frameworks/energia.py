@@ -37,6 +37,7 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler"),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
+        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
         join(FRAMEWORK_DIR,"system","tools","xdctools_core"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","lib","gcc","arm-none-eabi","6.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include"),
