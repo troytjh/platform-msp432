@@ -67,7 +67,7 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-    ]
+    ],
 
     LINKFLAGS=[
         "-Os",
