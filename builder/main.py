@@ -46,10 +46,6 @@ env.Replace(
     PROGSUFFIX=".elf"
 )
 
-env.library(
-    join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib","crt0.o"),
-)
-
 env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
@@ -75,7 +71,10 @@ env.Append(
         "-Wl,-gc-sections,-u,main"
     ],
 
-    LIBS=["m"],
+    LIBS=[
+        "m",
+        join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib","crt0.o"),
+    ],
 
     BUILDERS=dict(
         ElfToHex=Builder(
