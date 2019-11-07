@@ -82,7 +82,8 @@ env.Append(
                 "-R",
                 ".eeprom",
                 "$SOURCES",
-                "$TARGET"
+                "$TARGET",
+                "-lm"
             ]), "Building $TARGET"),
             suffix=".hex"
         )
