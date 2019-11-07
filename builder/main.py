@@ -73,7 +73,7 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-Wl,-gc-sections,-u,main,-Tmsp432p401r.lds"
+        "-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main"
     ],
 
     LIBS=["m"],
