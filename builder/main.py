@@ -68,17 +68,10 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-Wl,-gc-sections,-u,main"
+        "-Wl,-gc-sections,-u,main,-Tmsp432p401r.lds"
     ],
 
-    LIBPATH=[
-        join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib"),
-    ],
-
-    LIBS=[
-        "m",
-        "crt0.o",
-    ],
+    LIBS=["m"],
 
     BUILDERS=dict(
         ElfToHex=Builder(
