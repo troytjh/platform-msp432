@@ -65,10 +65,14 @@ env.Append(
         ("F_CPU", "$BOARD_F_CPU")
     ],
 
+    LIBPATH=[
+        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+    ]
+
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        -Wl,-gc-sections,-u,main,-Tjoin(platform.get_package_dir("toolchain-timsp432"),"arm","include","msp432p401r.lds"),
+        "-Wl,-gc-sections,-u,main,-Tmsp432p401r.lds"
     ],
 
     LIBS=["m"],
