@@ -47,7 +47,7 @@ env.Replace(
 )
 
 env.library(
-    join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib","crt0.o")
+    join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib","crt0.o"),
 )
 
 env.Append(
