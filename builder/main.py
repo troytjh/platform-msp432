@@ -71,10 +71,13 @@ env.Append(
         "-Wl,-gc-sections,-u,main"
     ],
 
+    LIBPATH=[
+        join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib"),
+    ]
+
     LIBS=[
         "m",
-        -Ldir join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib"),
-        "-llibrary crt0.o,
+        "crt0.o",
     ],
 
     BUILDERS=dict(
