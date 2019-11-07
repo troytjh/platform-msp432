@@ -66,6 +66,7 @@ env.Append(
 
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries"),
+        join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ]
 )
 
