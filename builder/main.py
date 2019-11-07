@@ -67,6 +67,7 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ],
 
     LINKFLAGS=[
