@@ -73,7 +73,6 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-o crt0.o -xc",
         "-Wl,-gc-sections,-u,main,-Tmsp432p401r.lds"
     ],
 

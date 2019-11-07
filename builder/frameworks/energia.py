@@ -79,6 +79,7 @@ libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
     join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring"),
     join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","drivers"),
+    join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib","crt0.o"),
 ))
 
 env.Append(LIBS=libs)
