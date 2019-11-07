@@ -73,7 +73,7 @@ env.Append(
 
     LIBS=[
         "m",
-        -Ldir=join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib"),
+        -Ldir join(platform.get_package_dir("toolchain-timsp432"),"arm_compiler","arm-none-eabi","lib"),
         "-llibrary crt0.o,
     ],
 
