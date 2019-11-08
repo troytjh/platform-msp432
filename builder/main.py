@@ -54,11 +54,6 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mcpu=cortex-m4",
-        "-mthumb",
-        #"-mfloat-abi=hard",
-        "-mfpu=fpv4-sp-d16",
-        "-mabi=aapcs",
-        "-lm"
     ],
 
     CXXFLAGS=[
@@ -78,23 +73,15 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-mthumb",
-        "-nostartfiles",
+ 
         "--specs=nosys.specs",
         #"-L{build.system.path}/kernel/tirtos/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard" "-L{build.path}" "-L{build.core.path}" "-L{build.system.path}/energia" "-L{build.system.path}/kernel" "-L{build.system.path}/source" "-L{build.system.path}/kernel/tirtos/builds/{build.variant}/energia/" "-L{build.system.path}/kernel/tirtos/packages",
         #"-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main"
-        "-Wl,-u,main",
-        "-L{build.core.path}/ti/runtime/wiring/msp432",
-        "-L{build.core.path}/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R",
         "-Wl,--check-sections",
-        "-Wl,--gc-sections",
+        "-Wl,--gc-sections,-u,main",
         "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
-        "-lstdc++", 
-        "-lgcc", 
-        "-lm", 
-        "-lnosys", 
-        "-lc", 
+        "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
         "-Wl,--end-group"
     ],
 

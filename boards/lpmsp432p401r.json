@@ -3,7 +3,7 @@
   "device_id": "MSP432P401R",
   "build": {
     "core": "msp432r",
-    "extra_flags": "-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mabi=aapcs -g -Dxdc_target_types__=gnu/targets/arm/std.h -Dxdc_target_name__=M4F -Dxdc_cfg__xheader__={build.system.path}/system/energia/configPkg/package/cfg/energia_pm4fg.h -DBOARD_MSP_EXP432P401R -Dxdc__nolocalstring=1 -DCORE_VERSION={version.string} -DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D_DEFAULT_SOURCE -D__MSP432P401R__",
+    "extra_flags": "-DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D_DEFAULT_SOURCE -D__MSP432P401R__",
     "f_cpu": "48000000L",
     "hwids": [
       [
