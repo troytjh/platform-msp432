@@ -87,7 +87,7 @@ env.Append(
         "-L{build.core.path}/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R",
         "-Wl,--check-sections",
         "-Wl,--gc-sections {build.path}/{archive_file}",
-        "-Wl,-Tmsp432p401r.lds {build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
+        "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", 
         "-lgcc", 
