@@ -45,23 +45,6 @@ env.Append(
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "lib","gcc","msp432","8.2.1","include-fixed"),
-        #join(platform.get_package_dir("toolchain-timsp432"), "lib", "gcc","msp432","8.2.1"),
-        #join(platform.get_package_dir("toolchain-timsp432"),"lib","gcc","msp432","8.2.1","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"),"arm","src"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","package","internal"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"xdc","runtime","knl","package","internal"),
-        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","gnu","targets","arm"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core")),
-        #join(FRAMEWORK_DIR,"system","energia"),
-        #join(FRAMEWORK_DIR,"system","source"),
-        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
     ],
 
     LIBSOURCE_DIRS=[
@@ -78,7 +61,7 @@ libs = []
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
     join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring"),
-    join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","drivers"),
+    #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","drivers"),
 ))
 
 env.Append(LIBS=libs)
