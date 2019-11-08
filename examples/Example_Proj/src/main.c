@@ -107,7 +107,7 @@ void Check_Quantity(struct inventory disp) {
     printf("Amoxil %i\nVicodin %i\nTylenol %i\nZestril %i\n\n\r", 
         disp.Amoxil, disp.Vicodin, disp.Tylenol, disp.Zestril);
     
-    char b=NULL; 
+    char b='\0'; 
     printf("Return to menu bress b\n\r");
     while(b!='b') { scanf(" %c",&b); }
 }
