@@ -63,7 +63,7 @@ env.Append(
     ],
 
     CPPDEFINES=[
-        ("F_CPU", "$BOARD_F_CPU", "DeviceFamily_MSP432P401x")
+        ("F_CPU", "$BOARD_F_CPU")
     ],
 
     LIBPATH=[
