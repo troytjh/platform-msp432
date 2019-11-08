@@ -67,13 +67,13 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
+        #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ],
 
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main"
+        "-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main,"
     ],
 
     LIBS=["m"],
