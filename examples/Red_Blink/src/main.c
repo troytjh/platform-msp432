@@ -7,7 +7,7 @@ int main(void) {
 	int out[] = {0x01,0x01};
 	int del = 7500000;
 
-	int rgb = 0x01;
+	int rgb = 0x04;
     while(1) {
         //place code to execute repeatedly
 	*(out+0) = 0x01; *(out+1)=0x01;
