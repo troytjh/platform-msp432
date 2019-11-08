@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "cstdarg": "cpp",
+        "msp.h": "c",
+        "msp432p401r.h": "c",
+        "stdint.h": "c"
+    }
+}
