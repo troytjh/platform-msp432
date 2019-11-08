@@ -54,6 +54,7 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mcpu=cortex-m4",
+        "-lm"
     ],
 
     CXXFLAGS=[
@@ -73,7 +74,7 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
-        "-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main,-lm"
+        "-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main"
     ],
 
     LIBS=["m"],
