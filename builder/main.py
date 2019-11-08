@@ -73,10 +73,7 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
- 
-        "--specs=nosys.specs",
-        #"-L{build.system.path}/kernel/tirtos/packages/gnu/targets/arm/libs/install-native/arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard" "-L{build.path}" "-L{build.core.path}" "-L{build.system.path}/energia" "-L{build.system.path}/kernel" "-L{build.system.path}/source" "-L{build.system.path}/kernel/tirtos/builds/{build.variant}/energia/" "-L{build.system.path}/kernel/tirtos/packages",
-        #"-Wl,-Tmsp432p401r.lds,-gc-sections,-u,main"
+        #"--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections,-u,main",
         "-Wl,-Tmsp432p401r.lds",
