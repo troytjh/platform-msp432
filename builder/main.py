@@ -58,6 +58,7 @@ env.Append(
     ],
 
     CCFLAGS=[
+        -B join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","lib","gcc","arm-none-eabi","6.2.1"),
         "-c",
         "-g",
         "-O2",
@@ -103,7 +104,7 @@ env.Append(
         #"-Wl,--gc-sections",
         "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
-        "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
+        "-lstdc++", "-lgcc", "-lm", "-lc", 
         "-Wl,--end-group",
     ],
 
