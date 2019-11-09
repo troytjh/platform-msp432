@@ -93,6 +93,17 @@ env.Append(
     LIBS=["m"],
 
     BUILDERS=dict(
+        ElfToBin=Builder(
+                action=env.VerboseAction(" ".join([
+                    "$OBJCOPY",
+                    "-O",
+                    "binary",
+                    "$SOURCES",
+                    "$TARGET"
+                ]), "Building $TARGET"),
+                suffix=".bin"
+        ),
+
         ElfToHex=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
