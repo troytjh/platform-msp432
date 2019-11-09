@@ -82,6 +82,7 @@ env.Append(
         "-mfpu=fpv4-sp-d16", 
         "-mthumb",
         "--specs=nosys.specs",
+        "-nostartfiles"
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,-Tmsp432p401r.lds",
