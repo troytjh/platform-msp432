@@ -65,16 +65,12 @@ env.Append(
     ],
 
     CFLAGS=[
-        "-c",
-        "-g",
         "-O2",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
     ],
 
     CXXFLAGS=[
-        "-c",
-        "-g",
         "-O2",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
