@@ -63,9 +63,9 @@ env.Append(
         "-O2",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        #"-mcpu=cortex-m4",
-        #"-march=armv7e-m",
-        #"-mfloat-abi=hard", 
+        "-mcpu=cortex-m4",
+        "-march=armv7e-m",
+        "-mfloat-abi=hard", 
         #"-mfpu=fpv4-sp-d16", 
         #"-mthumb",
     ],
