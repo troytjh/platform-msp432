@@ -87,8 +87,7 @@ env.Append(
         "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
-        "-Wl,--end-group",
-        "--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols", 
+        "-Wl,--end-group"
     ],
 
     LIBS=["m"],
