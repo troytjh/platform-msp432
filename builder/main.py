@@ -85,7 +85,7 @@ env.Append(
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         #"-Wl,--gc-sections",
-        "-Wl,-T msp432p401r.lds",
+        "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
         "-Wl,--end-group",
