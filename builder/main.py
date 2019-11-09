@@ -76,6 +76,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
+        "-M",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
@@ -88,7 +89,6 @@ env.Append(
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
         "-Wl,--end-group",
-        "-M"
     ],
 
     LIBS=["m"],
