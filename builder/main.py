@@ -60,6 +60,17 @@ env.Append(
         "-mthumb",
     ],
 
+    CCFLAGS=[
+        "-Os",
+        "-ffunction-sections",  # place each function in its own section
+        "-fdata-sections",
+        "-mcpu=cortex-m4",
+        "-march=armv7e-m",
+        "-mfloat-abi=hard", 
+        "-mfpu=fpv4-sp-d16", 
+        "-mthumb",
+    ],
+
     CXXFLAGS=[
         "-fno-exceptions",
         "-fno-threadsafe-statics"
