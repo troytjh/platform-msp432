@@ -105,7 +105,9 @@ env.Append(
         ElfToBin=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "-O2",
+                "--keep-file-symbols",
+                "--localize-hidden",
+                "-O",
                 "binary",
                 "$SOURCES",
                 "$TARGET"
@@ -116,7 +118,9 @@ env.Append(
         ElfToHex=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "-O2",
+                "--keep-file-symbols",
+                "--localize-hidden",
+                "-O",
                 "ihex",
                 "-R",
                 ".eeprom",
