@@ -5,7 +5,7 @@
 int main(void) {
 	//place code that runs once
 	int out[] = {0x01,0x01};
-	int del = 750000;
+	int del = 75000;
 
 	int rgb = 0x01;
 	while(1) {

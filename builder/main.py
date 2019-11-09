@@ -64,17 +64,21 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         #"-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
+        #"-march=armv7e-m",
+        #"-mfloat-abi=hard", 
+        #"-mfpu=fpv4-sp-d16", 
         #"-mthumb",
     ],
 
     CXXFLAGS=[
         "-c",
         "-g",
+        "-O2",
+        "-ffunction-sections",  # place each function in its own section
+        "-fdata-sections",
+        "-fno-threadsafe-statics",
+        "-fno-rtti",
         "-fno-exceptions",
-        "-fno-threadsafe-statics"
     ],
 
     CPPDEFINES=[
