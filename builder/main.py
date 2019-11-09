@@ -102,7 +102,7 @@ env.Append(
         "-mthumb",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
-        #"-Wl,--gc-sections",
+        "-Wl,--gc-sections",
         "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lc", 
