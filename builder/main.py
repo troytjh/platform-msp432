@@ -27,7 +27,7 @@ env.Replace(
     SIZETOOL="arm-none-eabi-size",
     LINK="$CC",
 
-    ARFLAGS=["rc"],
+    ARFLAGS=["rcPs"],
 
     PIODEBUGFLAGS=["-O2", "-g3", "-ggdb", "-gdwarf-2"],
 
@@ -49,14 +49,6 @@ env.Replace(
 env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
-    CFLAGS=[
-        "-c",
-        "-g",
-        "-O2",
-        "-ffunction-sections",  # place each function in its own section
-        "-fdata-sections",
-    ],
-
     CCFLAGS=[
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/6.2.1",
         "-c",
@@ -65,10 +57,19 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mcpu=cortex-m4",
+        "-mthumb",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
-        #"-mfpu=fpv4-sp-d16", 
-        #"-mthumb",
+        "-mfpu=fpv4-sp-d16", 
+        
+    ],
+
+    CFLAGS=[
+        "-c",
+        "-g",
+        "-O2",
+        "-ffunction-sections",  # place each function in its own section
+        "-fdata-sections",
     ],
 
     CXXFLAGS=[
