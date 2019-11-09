@@ -87,7 +87,8 @@ env.Append(
         "-Wl,-T msp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
-        "-Wl,--end-group"
+        "-Wl,--end-group",
+        "-M"
     ],
 
     LIBS=["m"],
