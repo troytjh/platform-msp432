@@ -88,7 +88,7 @@ env.Append(
     ],
 
     LIBPATH=[
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ],
 
@@ -103,7 +103,7 @@ env.Append(
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
-        "-Wl,-Tmsp432p401r.lds",
+        #"-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lc", 
         "-Wl,--end-group",
