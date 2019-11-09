@@ -76,7 +76,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-M",
+        #"-M",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
