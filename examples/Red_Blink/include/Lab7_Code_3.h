@@ -1,7 +1,7 @@
 #ifndef FUNC
 #define FUNC
 
-#include "msp432p401r.h"
+#include "msp.h"
 
 void Led1(int o);
 
