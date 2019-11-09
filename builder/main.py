@@ -93,15 +93,22 @@ env.Append(
     LIBS=["m"],
 
     BUILDERS=dict(
-        ElfToBin=Builder(
-                action=env.VerboseAction(" ".join([
-                    "$OBJCOPY",
-                    "-O",
-                    "binary",
-                    "$SOURCES",
-                    "$TARGET"
-                ]), "Building $TARGET"),
-                suffix=".bin"
+
+        ElfToEep=Builder(
+            action=env.VerboseAction(" ".join([
+                "$OBJCOPY",
+                "-O",
+                "ihex",
+                "-j",
+                ".eeprom",
+                '--set-section-flags=.eeprom="alloc,load"',
+                "--no-change-warnings",
+                "--change-section-lma",
+                ".eeprom=0",
+                "$SOURCES",
+                "$TARGET"
+            ]), "Building $TARGET"),
+            suffix=".eep"
         ),
 
         ElfToHex=Builder(
