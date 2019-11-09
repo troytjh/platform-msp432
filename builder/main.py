@@ -54,6 +54,10 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mcpu=cortex-m4",
+        "-march=armv7e-m",
+        "-mfloat-abi=hard", 
+        "-mfpu=fpv4-sp-d16", 
+        "-mthumb",
     ],
 
     CXXFLAGS=[
@@ -73,6 +77,10 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         "-mcpu=cortex-m4",
+        "-march=armv7e-m",
+        "-mfloat-abi=hard", 
+        "-mfpu=fpv4-sp-d16", 
+        "-mthumb",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
