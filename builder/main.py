@@ -75,7 +75,7 @@ env.Append(
         "-mcpu=cortex-m4",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
-        "-Wl,--gc-sections,-u,main",
+        "-Wl,--gc-sections",
         "-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lnosys", "-lc", 
