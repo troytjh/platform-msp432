@@ -29,7 +29,7 @@ env.Replace(
 
     ARFLAGS=["rc"],
 
-    PIODEBUGFLAGS=["-O0", "-g3", "-ggdb", "-gdwarf-2"],
+    PIODEBUGFLAGS=["-O2", "-g3", "-ggdb", "-gdwarf-2"],
 
     SIZEPROGREGEXP=r"^(?:\.text|\.data|\.rodata|\.vectors)\s+([0-9]+).*",
     SIZEDATAREGEXP=r"^(?:\.data|\.bss|\.noinit)\s+(\d+).*",
@@ -50,18 +50,15 @@ env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CFLAGS=[
-        "-Os",
+        "-c",
+        "-g",
+        "-O2",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
-        "-mthumb",
     ],
 
     CCFLAGS=[
-        "-Os",
+        "-O2",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mcpu=cortex-m4",
@@ -86,7 +83,7 @@ env.Append(
     ],
 
     LINKFLAGS=[
-        "-Os",
+        "-O2",
         #"-M",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
@@ -108,7 +105,7 @@ env.Append(
         ElfToBin=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "-O",
+                "-O2",
                 "binary",
                 "$SOURCES",
                 "$TARGET"
@@ -119,7 +116,7 @@ env.Append(
         ElfToHex=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "-O",
+                "-O2",
                 "ihex",
                 "-R",
                 ".eeprom",
