@@ -49,7 +49,7 @@ env.Replace(
 env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
-    CCFLAGS=[
+    CFLAGS=[
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
