@@ -166,7 +166,7 @@ env.Append(
                 "-lnosys",
                 "-lc",
                 "-Wl,--end-group"
-            ]),"Building $TARGET")
+            ]),"Building $TARGET"),
             suffix=".elf"
         ),
     )
