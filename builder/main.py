@@ -91,7 +91,7 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",-
-        "-Wl,-Map,{build.path}/{build.project_name}.map,",
+        "-Wl,-Map,DEBUGGING.map,",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         #"-Wl,-Tmsp432p401r.lds",
