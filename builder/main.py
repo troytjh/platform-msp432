@@ -63,8 +63,6 @@ env.Append(
     ],
 
     CFLAGS=[
-        "-gstrict-dwarf", 
-        "-Wall"
     ],
 
     CXXFLAGS=[
