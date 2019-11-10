@@ -64,6 +64,8 @@ env.Append(
     ],
 
     CFLAGS=[
+        "-gstrict-dwarf", 
+        "-Wall"
     ],
 
     CXXFLAGS=[
@@ -78,8 +80,6 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        #join(platform.get_package_dir("toolchain-timsp432"),""
-        #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ],
 
     LINKFLAGS=[
@@ -91,10 +91,8 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
-        #"-Wl,-Map,{build.path}/{build.project_name}.map,",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
-        #"-Wl,-Tmsp432p401r.lds",
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lc", 
         "-Wl,--end-group",
@@ -162,11 +160,11 @@ env.Append(
 #            "{build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
 #            "-Wl,--start-group",
 #            "-lstdc++",
-#             "-lgcc",
-#               "-lm",
-#               "-lnosys",
-#                "-lc",
-#                "-Wl,--end-group",
+#            "-lgcc",
+#            "-lm",
+#            "-lnosys",
+#            "-lc",
+#            "-Wl,--end-group",
 #           ]),"Building $TARGET"),
 #            suffix=".elf"
 #        ),

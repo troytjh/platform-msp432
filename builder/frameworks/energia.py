@@ -38,17 +38,6 @@ env.Append(
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
         join(FRAMEWORK_DIR,"system","tools","xdctools_core"),
-
-        #join(FRAMEWORK_DIR,"source"),
-        #join(FRAMEWORK_DIR,"source","ti","devices","msp432p4xx"),
-        #join(FRAMEWORK_DIR,"source","ti","devices","msp432p4xx","inc"),
-        #join(FRAMEWORK_DIR,"source","ti","devices","msp432p4xx","driverlib"),
-        #join(FRAMEWORK_DIR,"source","third_party","CMSIS","Include"),
-
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring"),
-        #join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring","msp432"),
-        #join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti","sysbios","posix"),
-
         join(platform.get_package_dir("toolchain-timsp432"), "arm"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","lib","gcc","arm-none-eabi","6.2.1","include"),
@@ -73,15 +62,5 @@ libs.append(env.BuildLibrary(
     join("$BUILD_DIR", "FrameworkEnergia"),
     join(FRAMEWORK_DIR, "cores", board.get("build.core")),
 ))
-
-#libs.append(env.BuildLibrary(
-#    join("$BUILD_DIR", "ti_drivers"),
-#    join(FRAMEWORK_DIR, "system","source","ti","drivers"),
-#))
-
-#libs.append(env.BuildLibrary(
-#    join("$BUILD_DIR", "msp432p4xx"),
-#    join(FRAMEWORK_DIR, "system","source","ti","devices","msp432p4xx","driverlib"),
-#))
 
 env.Append(LIBS=libs)
