@@ -66,7 +66,7 @@ libs.append(env.BuildLibrary(
 
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR","msp432p4xx_driverlib"),
-    join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib","gcc"),
+    join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
 ))
 
 env.Append(LIBS=libs)
