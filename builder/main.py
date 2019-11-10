@@ -64,9 +64,6 @@ env.Append(
     ],
 
     CFLAGS=[
-        "-funsigned-char",
-        "-fshort-enums",
-        "-fshort-wchar",
     ],
 
     CXXFLAGS=[
@@ -91,6 +88,8 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
+        "--specs=rdimon.specs",
+        "--nano.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
