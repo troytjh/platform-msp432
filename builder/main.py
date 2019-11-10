@@ -60,10 +60,10 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
-        "-Wint-conversion",
     ],
 
     CFLAGS=[
+        "-Wint-conversion",
     ],
 
     CXXFLAGS=[
