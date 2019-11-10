@@ -150,7 +150,7 @@ env.Append(
                 "-Dxdc_target_types__=gnu/targets/arm/std.h",
                 "xdc_target_name__=M4F",
                 "-o",
-                "$BUILD_DIR/${PROGNAME}.elf
+                "$TARGET",
                 "$SOURCES",
                 "-L{build.core.path}/ti/runtime/wiring/msp432",
                 "-L{build.core.path}/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R",
@@ -167,7 +167,8 @@ env.Append(
                 "-lc",
                 "-Wl,--end-group"
             ]),"Building $TARGET")
-        )
+            suffix=".elf"
+        ),
     )
 )
 
