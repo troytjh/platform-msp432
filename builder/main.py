@@ -64,6 +64,9 @@ env.Append(
     ],
 
     CFLAGS=[
+        "-funsigned-char",
+        "-fshort-enums",
+        "-fshort-wchar",
     ],
 
     CXXFLAGS=[
