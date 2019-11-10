@@ -35,6 +35,7 @@ env.Append(
         join(variants_dir, board.get("build.variant")),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx"),
+        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
         join(FRAMEWORK_DIR,"system","tools","xdctools_core"),
