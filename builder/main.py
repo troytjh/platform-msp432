@@ -78,7 +78,6 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib","gcc"),
     ],
 
     LINKFLAGS=[
@@ -97,10 +96,7 @@ env.Append(
         "-Wl,--end-group",
     ],
 
-    LIBS=[
-        "m",
-        "msp432p4xx_driverlib"
-    ],
+    LIBS=["m"],
 
     BUILDERS=dict(
         ElfToBin=Builder(
