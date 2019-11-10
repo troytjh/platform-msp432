@@ -29,7 +29,7 @@ env.Replace(
 
     ARFLAGS=["rcPs"],
 
-    PIODEBUGFLAGS=["-O2", "-g3", "-ggdb", "-gdwarf-2"],
+    PIODEBUGFLAGS=["-Os", "-g3", "-ggdb", "-gdwarf-2"],
 
     SIZEPROGREGEXP=r"^(?:\.text|\.data|\.rodata|\.vectors)\s+([0-9]+).*",
     SIZEDATAREGEXP=r"^(?:\.data|\.bss|\.noinit)\s+(\d+).*",
@@ -52,7 +52,7 @@ env.Append(
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/6.2.1",
         "-c",
         "-g",
-        "-O2",
+        "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb",
@@ -82,8 +82,7 @@ env.Append(
     ],
 
     LINKFLAGS=[
-        "-O2",
-        #"-M",
+        "-Os",
         "-mthumb",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
@@ -103,8 +102,6 @@ env.Append(
         ElfToBin=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "--keep-file-symbols",
-                "--localize-hidden",
                 "-O",
                 "binary",
                 "$SOURCES",
@@ -116,8 +113,6 @@ env.Append(
         ElfToHex=Builder(
             action=env.VerboseAction(" ".join([
                 "$OBJCOPY",
-                "--keep-file-symbols",
-                "--localize-hidden",
                 "-O",
                 "ihex",
                 "-R",
@@ -195,7 +190,6 @@ if "nobuild" in COMMAND_LINE_TARGETS:
 else:
     target_elf = env.BuildProgram()
     target_firm = env.ElfToHex(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
-    #target_firm = env.Elf(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
 
 AlwaysBuild(env.Alias("nobuild", target_firm))
 target_buildprog = env.Alias("buildprog", target_firm, target_firm)
