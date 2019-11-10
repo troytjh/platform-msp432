@@ -63,7 +63,7 @@ env.Append(
     ],
 
     CFLAGS=[
-        "-c99"
+        "--c99"
     ],
 
     CXXFLAGS=[
