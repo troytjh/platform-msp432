@@ -89,7 +89,7 @@ env.Append(
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
         "--specs=rdimon.specs",
-        "--nano.specs",
+        "--specs=nano.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
