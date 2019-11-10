@@ -3,7 +3,7 @@
   "device_id": "MSP432P401R",
   "build": {
     "core": "msp432r",
-    "extra_flags": "-DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D__MSP432P401R__ -DTARGET_IS_MSP432P4XX -Wl,-Tmsp432p401r.lds",
+    "extra_flags": "-DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D__MSP432P401R__ -Wl,-Tmsp432p401r.lds",
     "f_cpu": "48000000L",
     "hwids": [
       [
