@@ -158,7 +158,7 @@ env.Append(
                 "-Wl,--gc-sections",
                 "{build.path/{archive_file}",
                 "-Wl,-Tmsp432p401r.lds",
-                "{build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
+                #"{build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
                 #"-Wl,--start-group",
                # "-lstdc++",
                 #"-lgcc",
