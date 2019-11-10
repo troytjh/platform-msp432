@@ -52,7 +52,7 @@ env.Append(
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/6.2.1",
         "-c",
         "-g",
-        "--apcs=interwork",
+        #"--apcs=interwork",
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
