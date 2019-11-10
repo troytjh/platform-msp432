@@ -130,45 +130,45 @@ env.Append(
             suffix=".hex"
         ),
 
-        Elf=Builder(
-            action=env.VerboseAction(" ",join([
-                "$CXX",
-                "-O",
-                "binary",
-                "-mcpu=cortex-m4",
-                "-mthumb",
-                "-nostartfiles",
-                "-Os",
-                "-Wl,--gc-sections",
-                "-specs=nosys.specs",
-                "-Wl,-Map,{build.path}/{build.project_name}.map",
-                "-mcpu=cortex-m4",
-                "-mfloat-abi=hard", 
-                "-mfpu=fpv4-sp-d16", 
-                "-mabi=aapcs",
-                "-g",
-                "-Dxdc_target_types__=gnu/targets/arm/std.h",
-                "xdc_target_name__=M4F",
-                "-o",
-                "$SOURCES",
-                "$TARGET",
-                "-L{build.core.path}/ti/runtime/wiring/msp432",
-                "-L{build.core.path}/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R",
-                "-Wl,--check-sections",
-                "-Wl,--gc-sections",
-                "{build.path/{archive_file}",
-                "-Wl,-Tmsp432p401r.lds",
-                #"{build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
-                #"-Wl,--start-group",
-               # "-lstdc++",
-                #"-lgcc",
-                #"-lm",
-                #"-lnosys",
-                #"-lc",
-                #"-Wl,--end-group",
-            ]),"Building $TARGET"),
-            suffix=".elf"
-        ),
+#    Elf=Builder(
+#        action=env.VerboseAction(" ",join([
+#            "$CXX",
+#            "-O",
+#            "binary",
+#            "-mcpu=cortex-m4",
+#             "-mthumb",
+#              "-nostartfiles",
+#               "-Os",
+#               "-Wl,--gc-sections",
+#               "-specs=nosys.specs",
+#                "-Wl,-Map,{build.path}/{build.project_name}.map",
+#                "-mcpu=cortex-m4",
+#                "-mfloat-abi=hard", 
+#              "-mfpu=fpv4-sp-d16", 
+#              "-mabi=aapcs",
+#              "-g",
+#              "-Dxdc_target_types__=gnu/targets/arm/std.h",
+#               "xdc_target_name__=M4F",
+#               "-o",
+#               "$SOURCES",
+#                "$TARGET",
+#                "-L{build.core.path}/ti/runtime/wiring/msp432",
+#                "-L{build.core.path}/ti/runtime/wiring/msp432/variants/MSP_EXP432P401R",
+#               "-Wl,--check-sections",
+#                "-Wl,--gc-sections",
+#                "{build.path/{archive_file}",
+#               "-Wl,-Tmsp432p401r.lds",
+#                "{build.system.path}/source/ti/devices/msp432p4xx/driverlib/gcc/msp432p4xx_driverlib.a",
+#               "-Wl,--start-group",
+#               "-lstdc++",
+#               "-lgcc",
+#               "-lm",
+#               "-lnosys",
+#                "-lc",
+#                "-Wl,--end-group",
+#           ]),"Building $TARGET"),
+#            suffix=".elf"
+#        ),
     )
 )
 
@@ -196,8 +196,8 @@ if "nobuild" in COMMAND_LINE_TARGETS:
     target_firm = join("$BUILD_DIR", "${PROGNAME}.hex")
 else:
     target_elf = env.BuildProgram()
-    #target_firm = env.ElfToHex(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
-    target_firm = env.Elf(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
+    target_firm = env.ElfToHex(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
+    #target_firm = env.Elf(join("$BUILD_DIR", "${PROGNAME}"), target_elf)
 
 AlwaysBuild(env.Alias("nobuild", target_firm))
 target_buildprog = env.Alias("buildprog", target_firm, target_firm)
