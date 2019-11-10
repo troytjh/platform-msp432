@@ -78,7 +78,7 @@ env.Append(
 
     LIBPATH=[
         join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),""
+        #join(platform.get_package_dir("toolchain-timsp432"),""
         #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","lib"),
     ],
 
@@ -121,9 +121,10 @@ env.Append(
                 "--keep-file-symbols",
                 "--localize-hidden",
                 "-O",
-                "ihex",
-                "-R",
-                ".eeprom",
+                #"ihex",
+                #"-R",
+                #".eeprom",
+                "binary",
                 "$SOURCES",
                 "$TARGET",
             ]), "Building $TARGET"),
