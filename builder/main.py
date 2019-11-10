@@ -99,7 +99,7 @@ env.Append(
 
     LIBS=[
         "m",
-        "msp432p4xx_driverlib.a"
+        "msp432p4xx_driverlib"
     ],
 
     BUILDERS=dict(
