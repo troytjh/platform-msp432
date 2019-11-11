@@ -49,8 +49,9 @@ env.Append(
     ASFLAGS=["-c","-x", "assembler-with-cpp"],
 
     CCFLAGS=[
+        "-Wp,-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
-        "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/6.2.1",
+        "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/9.2.1",
         "-c",
         "-Os",
         "-ffunction-sections",  # place each function in its own section
@@ -66,7 +67,7 @@ env.Append(
     ],
 
     CXXFLAGS=[
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/6.2.1",
+        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.1",
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
