@@ -49,6 +49,9 @@ env.Append(
         #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
+        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring"),
+        join(FRAMEWORK_DIR, "cores", board.get("build.core"),"ti","runtime","wiring","msp432"),
+        join(FRAMEWORK_DIR,"system","kernel","tirtos","packages","ti","sysbios","posix"),
     ],
 
     LIBSOURCE_DIRS=[
