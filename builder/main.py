@@ -54,6 +54,7 @@ env.Append(
         "-g",
         #"--apcs=interwork",
         "-Os",
+        "-Wall",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb",
@@ -64,6 +65,7 @@ env.Append(
     ],
 
     CFLAGS=[
+        "-std=c99"
     ],
 
     CXXFLAGS=[
@@ -88,7 +90,6 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
-        "--specs=nano.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
