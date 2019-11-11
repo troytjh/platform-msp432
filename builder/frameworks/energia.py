@@ -31,22 +31,23 @@ env.Append(
         ("ENERGIA", int(FRAMEWORK_VERSION.split(".")[1]))
     ],
     CPPPATH=[
-        #join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
+        join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
         join(FRAMEWORK_DIR,"system","source"),
+        join(FRAMEWORK_DIR,"system","source","third_party","CMSIS","Include"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","inc"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
         join(FRAMEWORK_DIR,"system","tools","xdctools_core"),
-        join(platform.get_package_dir("toolchain-timsp432"), "arm"),
+        #join(platform.get_package_dir("toolchain-timsp432"), "arm"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","lib","gcc","arm-none-eabi","6.2.1","include"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include"),
         join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        #join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
     ],
 
     LIBSOURCE_DIRS=[
