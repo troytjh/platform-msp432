@@ -75,7 +75,7 @@ env.Append(
     ],
 
     LIBPATH=[
-        join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
+        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","linker_files","gcc"),
     ],
 
     LINKFLAGS=[
