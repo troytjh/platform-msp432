@@ -65,7 +65,7 @@ env.Append(
     ],
 
     CXXFLAGS=[
-        -I join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
+        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/6.2.1",
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
