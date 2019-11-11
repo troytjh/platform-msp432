@@ -90,7 +90,7 @@ env.Append(
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
-        "-lstdc++", "-lgcc", "-lm", "-lc", 
+        "-lm",
         "-Wl,--end-group",
     ],
 
