@@ -49,7 +49,7 @@ env.Append(
     ASFLAGS=["-c","-x", "assembler-with-cpp"],
 
     CCFLAGS=[
-        "-Wp,-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
+        #"-Wp,-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/9.2.1",
         "-c",
