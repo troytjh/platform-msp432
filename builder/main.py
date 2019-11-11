@@ -54,7 +54,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mthumb-interwork",
+        "-mthumb",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
@@ -65,6 +65,7 @@ env.Append(
     ],
 
     CXXFLAGS=[
+        -I join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
@@ -80,7 +81,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-mthumb-interwork",
+        "-mthumb",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
