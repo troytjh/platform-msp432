@@ -54,10 +54,10 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mthumb",
+        "-marm",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
-        #"-mfloat-abi=hard", 
+        "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
     ],
 
@@ -80,10 +80,10 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-mthumb",
+        "-marm",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
-        #"-mfloat-abi=hard", 
+        "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
         "-Wl,--check-sections",
