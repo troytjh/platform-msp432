@@ -3,7 +3,7 @@
   "device_id": "MSP432P401R",
   "build": {
     "core": "msp432r",
-    "extra_flags": "-Wl,-Tmsp432p401r.lds -DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D__MSP432P401R__",
+    "extra_flags": "-Wl,-Tmsp432p401r.lds -DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D__MSP432P401R__ -Dxdc_target_types__=gnu/targets/arm/std.h -Dxdc_target_name__=M4F -Dxdc_cfg__xheader__=configPkg/package/cfg/energia_pm4fg.h",
     "f_cpu": "48000000L",
     "hwids": [
       [
