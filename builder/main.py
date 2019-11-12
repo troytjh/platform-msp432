@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-x", "assembler-with-cpp"],
+    ASFLAGS=["-meabi=5", "-x", "assembler-with-cpp"],
 
     CCFLAGS=[
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
@@ -55,7 +55,6 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mabi=aapcs",
         #"-mthumb",
         #"-mcpu=cortex-m4",
         #"-march=armv7e-m",
@@ -88,7 +87,6 @@ env.Append(
         #"-march=armv7e-m",
         #"-mfloat-abi=hard", 
         #"-mfpu=fpv4-sp-d16", 
-        "-mabi=aapcs",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
