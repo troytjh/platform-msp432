@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/lib/gcc/arm-none-eabi/6.2.1","-c","-x", "assembler-with-cpp"],
+    ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
         "-B platform.get_package_dir(toolchain-timsp432)/arm_compiler/bin",
