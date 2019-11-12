@@ -56,7 +56,7 @@ env.Append(
         "-mthumb",
         "-mcpu=cortex-m4",
         #"-march=armv7e-m",
-        #"-mfloat-abi=hard", 
+        "-mfloat-abi=hard", 
         #"-mfpu=fpv4-sp-d16", 
     ],
 
@@ -83,7 +83,7 @@ env.Append(
         "-mthumb",
         "-mcpu=cortex-m4",
         #"-march=armv7e-m",
-        #"-mfloat-abi=hard", 
+        "-mfloat-abi=hard", 
         #"-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
         "-Wl,--check-sections",
