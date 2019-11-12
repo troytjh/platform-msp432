@@ -33,12 +33,12 @@ env.Append(
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
+        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","inc"),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","source","energia"),
         join(FRAMEWORK_DIR,"system","source","third_party","CMSIS","Include"),
         join(FRAMEWORK_DIR,"system","source","ti","drivers"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx"),
-        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","inc"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
