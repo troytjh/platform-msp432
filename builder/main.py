@@ -36,9 +36,10 @@ env.Replace(
     SIZECHECKCMD="$SIZETOOL -A -d $SOURCES",
     SIZEPRINTCMD='$SIZETOOL -B -d $SOURCES',
 
-    UPLOADER="gdb_agent_console",
+    UPLOADER="mspdebug",
     UPLOADERFLAGS=[
-        "xds110_msp432_swd.dat"
+        "$UPLOAD_PROTOCOL" if system() != "Windows" else "tilib",
+        "--force-reset"
     ],
     UPLOADCMD='$UPLOADER $UPLOADERFLAGS "prog $SOURCES"',
 
