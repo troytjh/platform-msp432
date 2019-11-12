@@ -55,9 +55,9 @@ env.Append(
         "-fdata-sections",
         "-mthumb",
         "-mcpu=cortex-m4",
-        #"-march=armv7e-m",
+        "-march=armv7e-m",
         "-mfloat-abi=hard", 
-        #"-mfpu=fpv4-sp-d16", 
+        "-mfpu=fpv4-sp-d16", 
     ],
 
     CFLAGS=[
@@ -82,9 +82,9 @@ env.Append(
         "-Os",
         "-mthumb",
         "-mcpu=cortex-m4",
-        #"-march=armv7e-m",
+        "-march=armv7e-m",
         "-mfloat-abi=hard", 
-        #"-mfpu=fpv4-sp-d16", 
+        "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
