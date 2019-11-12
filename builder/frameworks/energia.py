@@ -51,7 +51,7 @@ env.Append(
         #join(platform.get_package_dir("toolchain-timsp432"), "arm_compiler","arm-none-eabi","include","c++","6.2.1"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","include"),
         #join(platform.get_package_dir("toolchain-timsp432"),"arm","include","CMSIS"),
-    ],
+    ]
 
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries"),
