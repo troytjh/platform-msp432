@@ -49,7 +49,6 @@ env.Append(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
-        "-c",
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
@@ -70,6 +69,7 @@ env.Append(
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
+        "-std=gnu11"
     ],
 
     CPPDEFINES=[
