@@ -98,6 +98,7 @@ env.Append(
         "-Wl,--start-group", 
         "-lstdc++", "-lgcc", "-lm", "-lc", 
         "-Wl,--end-group",
+        "-fsingle-precision-constant",
     ],
 
     LIBS=["c","gcc","m"],
