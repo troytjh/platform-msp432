@@ -92,8 +92,6 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
-        "-nostartfiles",
-        "-nostdlib",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
