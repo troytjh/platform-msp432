@@ -58,6 +58,7 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
+        "-nostdlib"
     ],
 
     CFLAGS=[
@@ -91,6 +92,7 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
+        "-nostdlib",
         "--specs=nosys.specs",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
