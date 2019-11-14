@@ -69,7 +69,7 @@ env.Append(
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
-        "-std=gnu11"
+        "-std=gnu++11"
     ],
 
     CPPDEFINES=[
