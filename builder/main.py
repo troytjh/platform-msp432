@@ -58,9 +58,11 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
+        "-mabi=aapcs",
     ],
 
     CFLAGS=[
+        "-std=gnu11"
     ],
 
     CXXFLAGS=[
@@ -97,7 +99,7 @@ env.Append(
         "-Wl,--end-group",
     ],
 
-    LIBS=["m"],
+    LIBS=["c","gcc","m"],
 
     BUILDERS=dict(
         ElfToBin=Builder(
