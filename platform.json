@@ -16,7 +16,7 @@
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
       "http://dl.platformio.org/packages/manifest.json",
-      "https://gist.githubusercontent.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/1d401c9a33ebcb913bc1dacae8f807101feee311/manifest.json"
+      "https://gist.githubusercontent.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/03d954db3e0e9c21c3ea4a3a617d490f7c02e0ce/manifest.json"
     ],
     "frameworks": {
       "arduino": {
