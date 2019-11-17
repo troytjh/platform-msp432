@@ -32,8 +32,8 @@ env.Append(
     ],
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm-none-eabi","include"),
         join(variants_dir, board.get("build.variant")),
+        join(platform.get_package_dir("toolchain-timsp432"),"arm-none-eabi","include"),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","source","energia"),
         join(FRAMEWORK_DIR,"system","source","third_party","CMSIS","Include"),
