@@ -32,6 +32,7 @@ env.Append(
     ],
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
+        join(platform.get_package_dir("toolchain-timsp432"),"arm-none-eabi","include"),
         join(variants_dir, board.get("build.variant")),
         join(FRAMEWORK_DIR,"system","source"),
         join(FRAMEWORK_DIR,"system","source","energia"),
@@ -42,7 +43,7 @@ env.Append(
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
-        join(platform.get_package_dir("toolchain-timsp432"),"arm-none-eabi","include"),
+
     ],
 
     LIBSOURCE_DIRS=[

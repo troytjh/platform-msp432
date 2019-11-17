@@ -62,11 +62,12 @@ env.Append(
     ],
 
     CFLAGS=[
+        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
         "-std=gnu11"
     ],
 
     CXXFLAGS=[
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/6.2.1",
+        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
