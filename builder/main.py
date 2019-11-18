@@ -97,6 +97,8 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "--specs=nosys.specs",
+        "-u _scanf_float",
+        "-u _printf_float",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
