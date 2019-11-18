@@ -59,7 +59,7 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
-        #"-nostdlib"
+        "-nostdlib"
     ],
 
     CFLAGS=[
