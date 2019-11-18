@@ -91,7 +91,7 @@ env.Append(
         "-Os",
         #"-mthumb",
         #"-nostartfiles",
-        "--specs=nosys.specs",
+        #"--specs=nosys.specs",
         #"--specs=nano.specs",
         "--specs=rdimon.specs",
         "-mthumb-interwork",
