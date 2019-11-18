@@ -96,7 +96,7 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
-        "--specs=nosys.specs",
+        "--specs=rdimon.specs",
         "-u _scanf_float",
         "-u _printf_float",
         "-Wl,--check-sections",
