@@ -92,7 +92,7 @@ env.Append(
         #"-mthumb",
         #"-nostartfiles",
         "--specs=nosys.specs",
-        "--specs=nano.specs",
+        #"--specs=nano.specs",
         "--specs=rdimon.specs",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
