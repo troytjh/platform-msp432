@@ -91,9 +91,10 @@ env.Append(
         "-Os",
         #"-mthumb",
         #"-nostartfiles",
-        #"--specs=nosys.specs",
-        #"--specs=nano.specs",
-        "--specs=rdimon.specs",
+        "-nostdlib"
+        "--specs=nosys.specs",
+        "--specs=nano.specs",
+        #"--specs=rdimon.specs",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
