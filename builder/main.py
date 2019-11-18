@@ -52,7 +52,7 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        "-mthumb",
+        #"-mthumb",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
@@ -89,7 +89,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-mthumb",
+        #"-mthumb",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
