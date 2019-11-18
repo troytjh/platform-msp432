@@ -54,6 +54,7 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb",
+        "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
@@ -81,7 +82,6 @@ env.Append(
         "xdc_target_name__=M4F", 
         "xdc_cfg__xheader__=configPkg/package/cfg/energia_pm4fg.h", 
         "xdc__nolocalstring=1",
-        "--apcs=interwork",
     ],
 
     LIBPATH=[
