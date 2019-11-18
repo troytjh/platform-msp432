@@ -53,7 +53,6 @@ env.Append(
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         #"-mthumb",
-        "-nostartfiles",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
