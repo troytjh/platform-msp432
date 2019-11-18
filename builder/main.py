@@ -81,6 +81,7 @@ env.Append(
         "xdc_target_name__=M4F", 
         "xdc_cfg__xheader__=configPkg/package/cfg/energia_pm4fg.h", 
         "xdc__nolocalstring=1",
+        "--apcs=interwork",
     ],
 
     LIBPATH=[
