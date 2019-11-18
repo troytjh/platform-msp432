@@ -59,7 +59,7 @@ env.Append(
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
-        "-nostdlib"
+        #"-nostdlib"
     ],
 
     CFLAGS=[
@@ -89,12 +89,8 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        #"-mthumb",
-        #"-nostartfiles",
-        "-nostdlib",
         "--specs=nosys.specs",
         "--specs=nano.specs",
-        #"--specs=rdimon.specs",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
