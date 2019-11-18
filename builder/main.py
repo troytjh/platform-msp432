@@ -25,7 +25,7 @@ env.Replace(
     OBJCOPY="arm-none-eabi-objcopy",
     RANLIB="arm-none-eabi-ranlib",
     SIZETOOL="arm-none-eabi-size",
-    LINK="$CC",
+    LINK="$CXX",
 
     ARFLAGS=["rcPs"],
 
