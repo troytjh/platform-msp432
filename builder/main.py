@@ -90,7 +90,7 @@ env.Append(
     LINKFLAGS=[
         "-Os",
         #"-mthumb",
-        "-nostartfiles",
+        #"-nostartfiles",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
