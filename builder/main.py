@@ -50,7 +50,6 @@ env.Append(
 
     CCFLAGS=[
         "-Os",
-        "--apcs=interwork",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb",
