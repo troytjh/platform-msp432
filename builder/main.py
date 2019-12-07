@@ -25,7 +25,7 @@ env.Replace(
     OBJCOPY="arm-none-eabi-objcopy",
     RANLIB="arm-none-eabi-ranlib",
     SIZETOOL="arm-none-eabi-size",
-    LINK="$CC",
+    LINK="$CXX",
 
     ARFLAGS=["rcPs"],
 
@@ -52,13 +52,13 @@ env.Append(
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        #"-mthumb",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
+        "-nostartfiles",
         "-nostdlib"
     ],
 
@@ -89,14 +89,16 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        #"-mthumb",
-        #"-nostartfiles",
+        "--specs=nosys.specs",
+        "--specs=nano.specs",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
-        "--specs=nosys.specs",
+        "-Wl,--unresolved-symbols=report-all",
+        "-Wl,--warn-common",
+        "-Wl,--warn-section-align",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
