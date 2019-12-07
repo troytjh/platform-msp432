@@ -96,9 +96,12 @@ env.Append(
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
+<<<<<<< HEAD
         "-Wl,--unresolved-symbols=report-all",
         "-Wl,--warn-common",
         "-Wl,--warn-section-align",
+=======
+>>>>>>> 33ed989906d5f5d1d014c5b219e0cca7288e306c
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--start-group", 
