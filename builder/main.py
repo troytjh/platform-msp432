@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-Wa","-adhln=main.s"],
+    ASFLAGS=[],
 
     CCFLAGS=[
         "-ffunction-sections",  # place each function in its own section
@@ -78,6 +78,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
+        "-Wa,-adhln=main.s"
         "-mthumb-interwork",
     ],
 
