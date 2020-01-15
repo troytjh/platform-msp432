@@ -90,6 +90,7 @@ libs.append(env.BuildLibrary(
     join(FRAMEWORK_DIR, "cores", board.get("build.core")),
 ))
 
+<<<<<<< HEAD
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR","msp432p4xx_driverlib"),
     join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
@@ -100,4 +101,6 @@ libs.append(env.BuildLibrary(
     join(platform.get_package_dir("toolchain-timsp432"),"lib","newlib"),
 ))
 
+=======
+>>>>>>> 2aefbc2ec65068779df930956b18d5bf7799de7a
 env.Append(LIBS=libs)

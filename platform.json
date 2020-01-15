@@ -16,7 +16,7 @@
     "packageRepositories": [
       "https://dl.bintray.com/platformio/dl-packages/manifest.json",
       "http://dl.platformio.org/packages/manifest.json",
-      "https://gist.githubusercontent.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/03d954db3e0e9c21c3ea4a3a617d490f7c02e0ce/manifest.json"
+      "https://gist.githubusercontent.com/troytjh/712fc37c1b3f7fdbb2334f85e662a2b4/raw/f10c8742577bc86ee21d5d79c40de71884d6b8fb/manifest.json"
     ],
     "frameworks": {
       "arduino": {
@@ -31,7 +31,7 @@
     "packages": {
       "toolchain-timsp432": {
         "type": "toolchain",
-        "version": "~1.0.0"
+        "version": "~1.0.1"
       },
       "framework-energiamsp432r": {
         "type": "framework",
