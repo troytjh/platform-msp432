@@ -70,10 +70,6 @@ env.Append(
 
     ],
 
-    LIBPATH=[
-        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","linker_files","gcc"),
-    ],
-
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries"),
     ],
