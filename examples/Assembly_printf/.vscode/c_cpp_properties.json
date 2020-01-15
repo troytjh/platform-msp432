@@ -1,0 +1,82 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/.git_repo/TAMU_Projects/SPRING_2020/ESET_349/Lab1-Introduction_to_Keil/code/include",
+                "/.git_repo/TAMU_Projects/SPRING_2020/ESET_349/Lab1-Introduction_to_Keil/code/src",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/cores/msp432r",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/third_party/CMSIS/Include",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/drivers",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx/inc",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx/driverlib",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/kernel/tirtos",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/kernel/tirtos/packages",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostEuropeETSI",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostEuropeETSI/utility",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostUSAFCC",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostUSAFCC/utility",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/EduBPMKII_Screen",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/SPI",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/Servo",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/WiFi",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/WiFi/utility",
+                "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/Wire",
+                "/home/troytjh/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/.git_repo/TAMU_Projects/SPRING_2020/ESET_349/Lab1-Introduction_to_Keil/code/include",
+                    "/.git_repo/TAMU_Projects/SPRING_2020/ESET_349/Lab1-Introduction_to_Keil/code/src",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/cores/msp432r",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/third_party/CMSIS/Include",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/drivers",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx/inc",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/source/ti/devices/msp432p4xx/driverlib",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/kernel/tirtos",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/system/kernel/tirtos/packages",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostEuropeETSI",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostEuropeETSI/utility",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostUSAFCC",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/AIR430BoostUSAFCC/utility",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/EduBPMKII_Screen",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/SPI",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/Servo",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/WiFi",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/WiFi/utility",
+                    "/home/troytjh/.platformio/packages/framework-energiamsp432r/libraries/Wire",
+                    "/home/troytjh/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "F_CPU=48000000L",
+                "xdc_target_types__=gnu/targets/arm/std.h",
+                "xdc_target_name__=M4F",
+                "xdc_cfg__xheader__=configPkg/package/cfg/energia_pm4fg.h",
+                "xdc__nolocalstring=1",
+                "PLATFORMIO=40100",
+                "ENERGIA_ARCH_MSP432",
+                "ENERGIA_MSP_EXP432P401R",
+                "__MSP432P401R__",
+                "ARDUINO=10807",
+                "ENERGIA=6",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "\"/home/troytjh/.platformio/packages/toolchain-timsp432/bin/arm-none-eabi-gcc\" -mthumb-interwork -march=armv7e-m+fp -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs"
+        }
+    ],
+    "version": 4
+}
