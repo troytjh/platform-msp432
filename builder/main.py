@@ -25,7 +25,7 @@ env.Replace(
     OBJCOPY="arm-none-eabi-objcopy",
     RANLIB="arm-none-eabi-ranlib",
     SIZETOOL="arm-none-eabi-size",
-    LINK="$AS",
+    LINK="$CXX",
 
     ARFLAGS=["rcPs"],
 
@@ -49,11 +49,10 @@ env.Append(
     ASFLAGS=["-x","assembler-with-cpp"],
 
     CCFLAGS=[
-
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb-interwork",
-        #"-nostdlib",
+        "-nostdlib",
     ],
 
     CFLAGS=[
