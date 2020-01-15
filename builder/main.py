@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["assembler-with-cpp"],
+    ASFLAGS=[],
 
     CCFLAGS=[
 
