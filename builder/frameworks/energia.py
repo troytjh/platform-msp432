@@ -32,7 +32,7 @@ env.Append(
     ],
 
     CCFLAGS=[
-        "-march=armv7e-m+fp",
+        "-march=armv8-m.main+fp",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
@@ -47,7 +47,7 @@ env.Append(
         "-Wl,--start-group", 
         "-lstdc++","-lm","-lgcc","-lc", 
         "-Wl,--end-group",
-        "-march=armv7e-m+fp",
+        "-march=armv8-m.main+fp",
         "-mfloat-abi=hard", 
         "-mfpu=fpv4-sp-d16", 
         #"-fsingle-precision-constant",
