@@ -56,7 +56,7 @@ env.Append(
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
+        #"-mfpu=fpv4-sp-d16", 
         "-mabi=aapcs",
         "-nostartfiles",
         "-nostdlib"
@@ -97,7 +97,7 @@ env.Append(
         "-mcpu=cortex-m4",
         "-march=armv7e-m",
         "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
+        #"-mfpu=fpv4-sp-d16", 
         "-Wl,--unresolved-symbols=report-all",
         "-Wl,--warn-common",
         "-Wl,--warn-section-align",
