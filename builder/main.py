@@ -78,7 +78,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-T FRAMEWORK_DIR/system/source/ti/devices/msp432p4xx/linker_files/gcc/msp432p401r.lds",
+        "-T $FRAMEWORK_DIR/system/source/ti/devices/msp432p4xx/linker_files/gcc/msp432p401r.lds",
         "-mthumb-interwork",
     ],
 
