@@ -46,47 +46,23 @@ env.Replace(
 )
 
 env.Append(
-<<<<<<< HEAD
     ASFLAGS=["-x","assembler-with-cpp"],
-=======
-    ASFLAGS=[],
->>>>>>> 2aefbc2ec65068779df930956b18d5bf7799de7a
 
     CCFLAGS=[
 
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb-interwork",
-<<<<<<< HEAD
         "-nostdlib",
     ],
 
     CFLAGS=[
         #"-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
-=======
-        "-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
-        "-mabi=aapcs",
-        "-nostartfiles",
-        "-nostdlib"
-    ],
-
-    CFLAGS=[
-        "-Os",
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
->>>>>>> 2aefbc2ec65068779df930956b18d5bf7799de7a
         "-std=gnu11"
     ],
 
     CXXFLAGS=[
-<<<<<<< HEAD
         #"-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
-=======
-        "-Os",
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
->>>>>>> 2aefbc2ec65068779df930956b18d5bf7799de7a
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
@@ -103,26 +79,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-<<<<<<< HEAD
         "-mthumb-interwork",
-=======
-        #"--specs=nosys.specs",
-        #"--specs=nano.specs",
-        "-mthumb-interwork",
-        "-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
-        "-Wl,--unresolved-symbols=report-all",
-        "-Wl,--warn-common",
-        "-Wl,--warn-section-align",
-        "-Wl,--check-sections",
-        "-Wl,--gc-sections",
-        "-Wl,--start-group", 
-        "-lstdc++", "-lgcc", "-lm", "-lc", 
-        "-Wl,--end-group",
-        "-fsingle-precision-constant",
->>>>>>> 2aefbc2ec65068779df930956b18d5bf7799de7a
     ],
 
     LIBS=["c","stdc++","gcc","m"],
