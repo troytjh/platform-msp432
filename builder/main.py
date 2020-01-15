@@ -49,7 +49,7 @@ env.Append(
     ASFLAGS=["assembler-with-cpp"],
 
     CCFLAGS=[
-        "-Os",
+
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb-interwork",
@@ -63,11 +63,13 @@ env.Append(
     ],
 
     CFLAGS=[
+        "-Os",
         "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
         "-std=gnu11"
     ],
 
     CXXFLAGS=[
+        "-Os",
         "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
         "-fno-threadsafe-statics",
         "-fno-rtti",
