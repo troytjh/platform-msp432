@@ -78,6 +78,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
+        "-T msp432p401r.lds",
         "-mthumb-interwork",
     ],
 

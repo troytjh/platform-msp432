@@ -39,7 +39,6 @@ env.Append(
     ],
 
     LINKFLAGS=[
-        "-T msp432p401r.lds",
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
         "-Wl,--unresolved-symbols=report-all",
