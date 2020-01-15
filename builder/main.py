@@ -76,10 +76,6 @@ env.Append(
         "xdc__nolocalstring=1",
     ],
 
-    LIBPATH=[
-        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","linker_files","gcc"),
-    ],
-
     LINKFLAGS=[
         "-Os",
         "-T msp432p401r.lds",
