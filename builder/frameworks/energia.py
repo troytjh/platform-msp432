@@ -41,7 +41,7 @@ env.Append(
     LINKFLAGS=[
         "-Wl,--check-sections",
         "-Wl,--gc-sections",
-        #"-Wl,--unresolved-symbols=report-all",
+        "-Wl,--unresolved-symbols=report-all",
         "-Wl,--warn-common",
         #"-Wl,--warn-section-align",
         "-Wl,--start-group", 
