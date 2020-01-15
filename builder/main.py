@@ -46,13 +46,14 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=[],
+    ASFLAGS=["-x","assembler-with-cpp"],
 
     CCFLAGS=[
+
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
         "-mthumb-interwork",
-        "-nostdlib",
+        #"-nostdlib",
     ],
 
     CFLAGS=[
@@ -78,7 +79,6 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "-Wa,-adhln=main.s"
         "-mthumb-interwork",
     ],
 
