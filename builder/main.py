@@ -91,7 +91,7 @@ env.Append(
 
     LINKFLAGS=[
         "-Os",
-        "--specs=nosys.specs",
+        #"--specs=nosys.specs",
         #"--specs=nano.specs",
         "-mthumb-interwork",
         "-mcpu=cortex-m4",
