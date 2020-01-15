@@ -46,29 +46,23 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-x", "assembler-with-cpp"],
+    ASFLAGS=["-x","assembler-with-cpp"],
 
     CCFLAGS=[
         "-Os",
         "-ffunction-sections",  # place each function in its own section
         "-fdata-sections",
-        #"-mthumb",
         "-mthumb-interwork",
-        "-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
-        "-mabi=aapcs",
-        "-nostdlib"
+        "-nostdlib",
     ],
 
     CFLAGS=[
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
+        #"-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include",
         "-std=gnu11"
     ],
 
     CXXFLAGS=[
-        "-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
+        #"-I platform.get_package_dir(toolchain-timsp432)/arm_compiler/arm-none-eabi/include/c++/9.2.0",
         "-fno-threadsafe-statics",
         "-fno-rtti",
         "-fno-exceptions",
@@ -83,28 +77,12 @@ env.Append(
         "xdc__nolocalstring=1",
     ],
 
-    LIBPATH=[
-        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","linker_files","gcc"),
-    ],
-
     LINKFLAGS=[
         "-Os",
-        "--specs=nosys.specs",
-        "--specs=nano.specs",
         "-mthumb-interwork",
-        "-mcpu=cortex-m4",
-        "-march=armv7e-m",
-        "-mfloat-abi=hard", 
-        "-mfpu=fpv4-sp-d16", 
-        "-Wl,--check-sections",
-        "-Wl,--gc-sections",
-        "-Wl,--start-group", 
-        "-lstdc++", "-lgcc", "-lm", "-lc", 
-        "-Wl,--end-group",
-        "-fsingle-precision-constant",
     ],
 
-    LIBS=["c","gcc","m"],
+    LIBS=["c","stdc++","gcc","m"],
 
     BUILDERS=dict(
         ElfToBin=Builder(

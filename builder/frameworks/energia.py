@@ -30,6 +30,29 @@ env.Append(
         ("ARDUINO", 10807),
         ("ENERGIA", int(FRAMEWORK_VERSION.split(".")[1]))
     ],
+
+    CCFLAGS=[
+        "-march=armv7e-m+fp",
+        "-mfloat-abi=hard", 
+        "-mfpu=fpv4-sp-d16", 
+        "-mabi=aapcs",
+    ],
+
+    LINKFLAGS=[
+        "-Wl,--check-sections",
+        "-Wl,--gc-sections",
+        "-Wl,--unresolved-symbols=report-all",
+        "-Wl,--warn-common",
+        #"-Wl,--warn-section-align",
+        "-Wl,--start-group", 
+        "-lstdc++","-lm","-lgcc","-lc", 
+        "-Wl,--end-group",
+        "-march=armv7e-m+fp",
+        "-mfloat-abi=hard", 
+        "-mfpu=fpv4-sp-d16", 
+        #"-fsingle-precision-constant",
+    ],
+
     CPPPATH=[
         join(FRAMEWORK_DIR, "cores", env.BoardConfig().get("build.core")),
         join(variants_dir, board.get("build.variant")),
@@ -40,15 +63,20 @@ env.Append(
         join(FRAMEWORK_DIR,"system","source","ti","drivers"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","inc"),
+        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","inc","CMSIS"),
         join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos"),
         join(FRAMEWORK_DIR,"system","kernel","tirtos","packages"),
 
     ],
 
+    LIBPATH=[
+        join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","linker_files","gcc"),
+    ],
+
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries"),
-    ]
+    ],
 )
 
 #
@@ -65,6 +93,11 @@ libs.append(env.BuildLibrary(
 libs.append(env.BuildLibrary(
     join("$BUILD_DIR","msp432p4xx_driverlib"),
     join(FRAMEWORK_DIR,"system","source","ti","devices","msp432p4xx","driverlib"),
+))
+
+libs.append(env.BuildLibrary(
+    join("$BUILD_DIR","newlib"),
+    join(platform.get_package_dir("toolchain-timsp432"),"lib","newlib"),
 ))
 
 env.Append(LIBS=libs)
