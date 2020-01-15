@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-x","assembler-with-asm"],
+    ASFLAGS=["-x","assembler-with-cpp"],
 
     CCFLAGS=[
         "-ffunction-sections",  # place each function in its own section
