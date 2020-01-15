@@ -7,7 +7,6 @@
     "arch": "armv7e-m",
     "extra_flags": "-DENERGIA_ARCH_MSP432 -DENERGIA_MSP_EXP432P401R -D__MSP432P401R__",
     "f_cpu": "48000000L",
-    //"ldscript": "msp432p401r.lds",
     "hwids": [
       [
         "0x2341",
