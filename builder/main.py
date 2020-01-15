@@ -46,7 +46,7 @@ env.Replace(
 )
 
 env.Append(
-    ASFLAGS=["-Wa,-adhln=main.s"],
+    ASFLAGS=["-Wa, -adhln=main.s"],
 
     CCFLAGS=[
         "-ffunction-sections",  # place each function in its own section
